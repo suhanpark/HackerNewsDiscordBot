@@ -3,7 +3,7 @@ name: News
 on:
   schedule:
     # Runs at 9:00 AM and 9:00 PM EST (14:00 and 02:00 UTC)
-    - cron: "0 14,2 * * *"
+    - cron: "0 14 * * *"
   workflow_dispatch:
 
 jobs:
