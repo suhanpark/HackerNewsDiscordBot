@@ -1,9 +1,9 @@
 # Hackernews Discord Bot
 
-This project posts the top 3 stories from Hacker News to a Discord channel every day using a GitHub Actions workflow.
+This project posts the top 10 stories from Hacker News to a Discord channel every 12 hours using a GitHub Actions workflow.
 
 ## Features
-- Fetches the top 3 stories from Hacker News daily.
+- Fetches the top 10 stories from Hacker News every 12 hours.
 - Posts story titles and direct links to a specified Discord channel via webhook.
 - Automated using GitHub Actions.
 
@@ -13,7 +13,7 @@ This project posts the top 3 stories from Hacker News to a Discord channel every
 
 ## How it Works
 - The workflow runs `fetch_and_notify_hn.py`, which:
-  - Fetches the top 3 stories from Hacker News.
+  - Fetches the top 10 stories from Hacker News.
   - Formats their titles and links.
   - Posts them to Discord using the webhook.
 
