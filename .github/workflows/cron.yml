@@ -2,7 +2,8 @@ name: News
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    # Runs at 9:00 AM and 9:00 PM EST (14:00 and 02:00 UTC)
+    - cron: "0 14,2 * * *"
   workflow_dispatch:
 
 jobs:
@@ -18,7 +19,7 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: pip install requests
-      - name: Notify Discord with top 3 Hacker News stories
+      - name: Notify Discord with top 10 Hacker News stories
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: python fetch_and_notify_hn.py 
